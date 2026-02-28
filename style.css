@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.overlay {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* background image inside the box */
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+  background-image: var(--bg-image);
+}
+
+h1,
+h5,
+p {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+/* style every occurrence of the word "White" */
+.black-word {
+  color: black;
+  font-weight: bold;
+}
