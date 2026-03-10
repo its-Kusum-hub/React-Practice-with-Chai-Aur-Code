@@ -9,7 +9,7 @@ body {
   background-color: black;
 }
 
-.overlay {
+.container {
   position: relative;
   width: 400px;
   height: 400px;
@@ -22,7 +22,7 @@ body {
 }
 
 /* background image inside the box */
-.overlay::before {
+.container::before {
   content: "";
   position: absolute;
   top: 0;

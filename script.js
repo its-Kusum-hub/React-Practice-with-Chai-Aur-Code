@@ -7,13 +7,13 @@ const images = [
 ];
 
 let currentIndex = 0;
-const overlay = document.querySelector(".overlay");
+const container = document.querySelector(".container");
 
 // Initial background
-overlay.style.setProperty("--bg-image", `url(${images[0]})`);
+container.style.setProperty("--bg-image", `url(${images[0]})`);
 
 // Change image every 2 seconds
 setInterval(() => {
   currentIndex = (currentIndex + 1) % images.length;
-  overlay.style.setProperty("--bg-image", `url(${images[currentIndex]})`);
+  container.style.setProperty("--bg-image", `url(${images[currentIndex]})`);
 }, 2000);
